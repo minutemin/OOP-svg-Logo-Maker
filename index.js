@@ -53,7 +53,7 @@ function init() {
         } else {
             console.log("Invalid shape!");
         } 
-        answers.shape.setColor(shape_color);
+        // answers.shape.setColor(shape_color);
 
     });
 }
@@ -62,8 +62,7 @@ function createSVG(text, text_color, shape) {
     return `
     <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     ${shape}
-    <text x="150" y="125" font-size-"60" fill="${data.text_color}>${data.text}</text></
-
+    <text x="150" y="125" font-size="60" fill="${data.text_color}>${data.text}</text>
     </svg>
     `;
 
@@ -71,7 +70,6 @@ function createSVG(text, text_color, shape) {
 
 
 function writeToFile(fileName, data) {
-    console.log("writing")
     fs.writeFileSync(fileName, data)
 };
 
