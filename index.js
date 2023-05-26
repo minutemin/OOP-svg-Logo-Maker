@@ -38,23 +38,21 @@ const questions = [
 function init() {
     inquirer.prompt(questions).then(function(answers) {
         // console.log(answers);
-        if (answers.shape == 'circle') {
+        if (answers.shape === 'circle') {
             const circle = new Circle(answers.shape_color)
-            createSVG(circle.render())
-            writeToFile('logo.svg', createSVG(circle.render()))
-        } else if (answers.shape == 'triangle') {
+            // createSVG(circle.render())
+            writeToFile('logo.svg', createSVG(answers.text, answers.text_color,circle.render()))
+        } else if (answers.shape === 'triangle') {
             const triangle = new Triangle(answers.shape_color)
-            createSVG(triangle.render())
-            writeToFile('logo.svg', createSVG(triangle.render()))
-        } else if (answers.shape == 'square') {
+            // createSVG(triangle.render())
+            writeToFile('logo.svg', createSVG(answers.text, answers.text_color,triangle.render()))
+        } else if (answers.shape === 'square') {
             const square = new Square(answers.shape_color)
-            createSVG(square.render())
-            writeToFile('logo.svg', createSVG(square.render()))
+            // createSVG(answers.text, answers.text_color, square.render())
+            writeToFile('logo.svg', createSVG(answers.text, answers.text_color, square.render()))
         } else {
             console.log("Invalid shape!");
         } 
-        // answers.shape.setColor(shape_color);
-
     });
 }
 
@@ -62,7 +60,7 @@ function createSVG(text, text_color, shape) {
     return `
     <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
     ${shape}
-    <text x="150" y="125" font-size="60" fill="${data.text_color}>${data.text}</text>
+    <text x="150" y="125" font-size="40" text-anchor="middle" fill="${text_color}">${text}</text>
     </svg>
     `;
 
@@ -74,3 +72,21 @@ function writeToFile(fileName, data) {
 };
 
 init();
+
+
+// <svg width="200" height="100">
+//   <rect x="0" y="0" width="200" height="100" stroke="red" stroke-width="3px" fill="white"/>
+//   <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">TEXT</text>    
+// </svg>
+
+// <g>
+// <rect x={x} y={y} width={width} height={height} />
+// <text
+//     x={x + width / 2}
+//     y={y + height / 2}
+//     dominant-baseline="middle"
+//     text-anchor="middle"
+// >
+//     {label}
+// </text>
+// </g>
