@@ -1,5 +1,7 @@
+// require Circle js file
 const Circle = require('../lib/Circle.js');
 
+// run test code for Triangle js file
 describe('Circle', () => {
     test('Tests for a circle that should have the right color', () => {
         const shape = new Circle();

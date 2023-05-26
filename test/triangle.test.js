@@ -1,5 +1,7 @@
+// require Triangle js file
 const Triangle = require('../lib/Triangle');
 
+// run test code for Triangle js file
 describe('Triangle', () => {
     test('should have the right color', () => {
         const shape = new Triangle();
