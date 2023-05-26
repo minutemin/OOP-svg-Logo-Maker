@@ -12,7 +12,15 @@ const questions = [
         type: 'input',
         name: 'text',
         message: 'Please enter 3 characters:',
+        validate: function (text) {
+            if (2 < text.length && text.length < 4) {
+                return true
+            } else {
+                console.log(' Wrong input length')
+                return false
+            }}
     },
+    
     {
         type: 'input',
         name: 'text_color',

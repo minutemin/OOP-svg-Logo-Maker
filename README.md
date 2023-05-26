@@ -1,4 +1,5 @@
 # homework-10-OOP-svgLogo
+
 OOP Challenge - SVG Logo generator
 
 Git Hub: https://github.com/minutemin/homework-10-OOP-svgLogo
@@ -13,6 +14,7 @@ Video Link:
 
 ## Description
 
+This challenge is geared for us to learn how to implement the svg logo thru node to create a logo using the prompt from inquirer.  We learned how to link files to each other to use constructor classes for other classes to extend to.  I have created a js file for each shape, with it linked to the constructor code for the shape which is chosen by the user. The user is asked to pick a 3 character 
 
 
 Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
