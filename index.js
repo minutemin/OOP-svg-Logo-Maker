@@ -20,7 +20,6 @@ const questions = [
                 return false
             }}
     },
-    
     {
         type: 'input',
         name: 'text_color',
