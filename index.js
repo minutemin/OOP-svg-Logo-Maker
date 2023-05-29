@@ -44,7 +44,8 @@ const questions = [
 
 // function init to prompt questions and run answers for shape chosen from user
 function init() {
-    inquirer.prompt(questions).then(function(answers) {
+    inquirer.prompt(questions)
+    .then(function(answers) {
         if (answers.shape === 'circle') {
             const circle = new Circle(answers.shape_color)
             writeToFile('logo.svg', createSVG(answers.text, answers.text_color,circle.render()))

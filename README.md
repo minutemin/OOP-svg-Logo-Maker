@@ -4,7 +4,7 @@ OOP Challenge - SVG Logo generator
 
 Git Hub: https://github.com/minutemin/homework-10-OOP-svgLogo
 
-Video Link: 
+Video Link: https://drive.google.com/file/d/1Puyc57ob9nkPUiaYJproHJqUurhHgO0m/view
 
 ## Badges
   ![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)
