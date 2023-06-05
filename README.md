@@ -1,8 +1,8 @@
 # homework-10-OOP-svgLogo
 
-OOP Challenge - SVG Logo generator
+Object Oriented Programming Challenge - SVG Logo generator
 
-Git Hub: https://github.com/minutemin/homework-10-OOP-svgLogo
+Git Hub: https://github.com/minutemin/homework-10-OOP-svgLogoMaker
 
 Video Link: https://drive.google.com/file/d/1Puyc57ob9nkPUiaYJproHJqUurhHgO0m/view
 
