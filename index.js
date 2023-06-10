@@ -13,6 +13,7 @@ const questions = [
         name: 'text',
         message: 'Please enter 3 characters:',
         validate: function (text) {
+            // const editText = answers.text.toUpperCase();
             if (2 < text.length && text.length < 4) {
                 return true
             } else {
@@ -58,6 +59,7 @@ function init() {
         } else {
             console.log("Invalid shape!");
         } 
+        console.log('Generated SVG logo file!!');
     });
 }
 
