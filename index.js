@@ -46,16 +46,16 @@ const questions = [
 function init() {
     inquirer.prompt(questions)
     .then(function(answers) {
-        const newText = answers.text.toUpperCase();
+        // const newText = answers.text.toUpperCase();
         if (answers.shape === 'circle') {
             const circle = new Circle(answers.shape_color)
-            writeToFile('logo.svg', createSVG(newText, answers.text_color,circle.render()))
+            writeToFile('logo.svg', createSVG(answers.text.toUpperCase(), answers.text_color,circle.render()))
         } else if (answers.shape === 'triangle') {
             const triangle = new Triangle(answers.shape_color)
-            writeToFile('logo.svg', createSVG(newText, answers.text_color,triangle.render()))
+            writeToFile('logo.svg', createSVG(answers.text.toUpperCase(), answers.text_color,triangle.render()))
         } else if (answers.shape === 'square') {
             const square = new Square(answers.shape_color)
-            writeToFile('logo.svg', createSVG(newText, answers.text_color, square.render()))
+            writeToFile('logo.svg', createSVG(answers.text.toUpperCase(), answers.text_color, square.render()))
         } else {
             console.log("Invalid shape!");
         } 
